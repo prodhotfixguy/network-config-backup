@@ -1,41 +1,37 @@
-# Network Configuration Backup Tool (Python + Netmiko)
+## Network Configuration Backup Script (Lab Project)
 
-A simple, scalable Python script for automating network device configuration backups.  
-Built with **Netmiko**, **YAML**, and **dotenv** for clean device management and secure credential handling.
+### Description:
 
----
+This is a **personal learning project** built to practice Python scripting for network automation tasks. The script was designed to simulate automating the process of backing up running configurations from network devices such as Cisco switches and routers.
 
-## 📌 Features
+While this tool was not deployed in production, the project helped me gain experience working with:
 
-- ✅ Backs up running configs from multiple network devices
-- ✅ Uses **YAML** for device inventory (easily expandable)
-- ✅ Passwords are securely handled via **environment variables** and a `.env` file (not committed to Git)
-- ✅ Outputs time-stamped backups for easy versioning
-- ✅ Supports any device platform supported by Netmiko (Cisco IOS, XE, NX-OS, etc.)
-
----
-
-## 📂 Project Structure
-
-network-config-backup/
-├── your_script.py # Main Python script
-├── devices.yaml # Device inventory (hostnames, IPs, creds, device types)
-├── .env # Environment variables (kept secret, NOT in repo)
-├── .gitignore # Git ignore rules
-├── requirements.txt # Python dependency list
-└── backups/ # Auto-generated backups (ignored by Git)
+- **Python scripting for network device interaction**
+- **YAML-based inventory management**
+- **File handling for configuration storage**
+- **Environment variable management for sensitive data**
+- **Version control workflows using Git (local repo only)**
 
 ---
 
-## ⚙️ Prerequisites
+### Features:
+
+- Connects to a list of devices (defined in a YAML file)
+- Uses SSH (via Paramiko or Netmiko—update depending on your script)
+- Pulls running configurations
+- Saves configs with timestamped filenames for archival
+- Includes error handling for unreachable devices
+
+---
+
+### Technologies Used:
 
 - Python 3.x
-- Virtual environment (venv recommended)
-- GitHub Personal Access Token (if pushing via HTTPS)
-
-Python Packages:
-
-pip install -r requirements.txt
+- YAML
+- Git (local, personal use)
 
 ---
 
+### Disclaimer:
+
+This was a **lab project** built for educational purposes only and was **not deployed in a production environment**.
