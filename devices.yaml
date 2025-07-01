@@ -1,0 +1,12 @@
+devices:
+- name: complex-spare
+  ip: 10.10.0.13
+  username: localadmin
+  password_env: LOCAL_SEC
+  device_type: cisco_xe
+
+- name: test-switch
+  ip: 10.10.200.45
+  username: testuser
+  password_env: TEST_USER
+  device_type: cisco_xe
